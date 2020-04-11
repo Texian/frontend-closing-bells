@@ -1,7 +1,7 @@
 import React from 'react';
 import jwt_decode from 'jwt-decode';
 import setAuthHeader from '../../utils/setAuthHeader';
-import NavBar from '../../layout/Navbar';
+import Navbar from '../../layout/Navbar/Navbar';
 import Routes from '../../config/routes';
 import UserApi from '../../api/UserAPI';
 import './App.css';
@@ -69,7 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="app">
-        <NavBar
+        <Navbar
           logout={this.logout}
           username={this.state.username}
         />
