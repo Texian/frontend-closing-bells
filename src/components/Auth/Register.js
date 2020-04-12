@@ -1,4 +1,5 @@
 import React from 'react';
+import './Register.css';
 
 class Register extends React.Component {
     state = {
@@ -34,7 +35,7 @@ class Register extends React.Component {
                         <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
                     </label>
                     <br />
-                    <label>
+                    <label>Verify Your Password:
                         <input type="password" name="passwordVerify" value={this.state.passwordVerify} onChange={this.handleChange}/>
                     </label>
                     <br />
