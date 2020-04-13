@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './Navbar.css';
-
 
 // signOut = () => {
 //     auth2 = gapi.auth2.getAuthInstance();
@@ -12,22 +10,24 @@ import './Navbar.css';
 
 const Navbar = (props) => {
     return (
-        <>
-        <div id="navbar">
+        <> 
+        <div className="brand-sidebar">
+        <a className="brand-logo darken-1" href="/">Home</a>
+        </div>
+        <ul className="sidenav leftside-navigation sidenav-fixed menu-shadow ps ps--active-y" id="slide-out" data-menu="menu-navigation">
             {
                 (props.user)
-                ?<div className="nav">
-                    <a href="/">Home</a>
-                    <a href='/users '>Profile</a>
-                    <a onClick={props.logout}>Logout</a>
+                ?<>
+                    <li><a href='/users '><span data-i18n="Profile">Profile</span></a></li>
+                    <li><a onClick={props.logout}><span data-i18n="Logout">Logout</span></a></li>
                     {/* <a onClick="signOut();">Logout</a> */}
-                </div>
-                :<div className="nav">
-                    <a href='/login'>Login</a>
-                    <a href='/register'>Register</a>
-                </div>
+                </>
+                :<>
+                    <li><a href='/login'><span data-i18n="Login">Login</span></a></li>
+                    <li><a href='/register'><span data-i18n="Register">Register</span></a></li>
+                </>
             }
-        </div>
+        </ul>
         </>
     )
 }

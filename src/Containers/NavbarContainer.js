@@ -4,9 +4,9 @@ import Navbar from '../layout/Navbar/Navbar';
 
 const NavbarContainer = () => {
     return (
-        <div id="navbar-container">
+        <aside className="sidenav-main nav-expanded nav-lock sidenav-light navbar-full sidenav-active-rounded">
             <Navbar />
-        </div>
+        </aside>
     );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import './Login.css';
 // import fb from './Buttons/FBLogin';
 
 class Login extends React.Component {
