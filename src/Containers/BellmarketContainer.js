@@ -47,7 +47,7 @@ class BellmarketContainer extends React.Component {
         let items = this.state.items;
 
         return(
-            <div className="BellmarketContainer">
+            <div className="container">
                 {items && items.map(item => {
                     return <Item item={item} key={item._id} handleEdit={this.handleEdit} handleDelete={this.handleDelete} />
                 })}

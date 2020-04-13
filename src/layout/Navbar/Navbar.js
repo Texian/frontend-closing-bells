@@ -12,13 +12,16 @@ const Navbar = (props) => {
     return (
         <> 
         <div className="brand-sidebar">
-        <a className="brand-logo darken-1" href="/">Home</a>
+            <h1 className="logo-wrapper">
+                <a className="brand-logo darken-1" href="/">Closing Bells</a>
+            </h1>
         </div>
         <ul className="sidenav leftside-navigation sidenav-fixed menu-shadow ps ps--active-y" id="slide-out" data-menu="menu-navigation">
+            <li><a href='/'><span data-i18n="Home">Home</span></a></li>
             {
                 (props.user)
                 ?<>
-                    <li><a href='/users '><span data-i18n="Profile">Profile</span></a></li>
+                    <li><a href='/users'><span data-i18n="Profile">Profile</span></a></li>
                     <li><a onClick={props.logout}><span data-i18n="Logout">Logout</span></a></li>
                     {/* <a onClick="signOut();">Logout</a> */}
                 </>

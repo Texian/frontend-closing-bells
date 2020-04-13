@@ -73,10 +73,10 @@ class App extends React.Component {
       <div id="app">
         <NavbarContainer
           logout={this.logout}
-          username={this.state.username}
+          user={this.state.username}
         />
         <Routes 
-          username={this.state.username}
+          user={this.state.username}
           login={this.login}
           register={this.register}
         />
