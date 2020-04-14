@@ -1,7 +1,7 @@
 import axios from 'axios';
 const endPoint = 'http://localhost:4000/api/v1/users';
 
-class UserProfileModel {
+class ProfileAPI {
     static getAll = () => {
         let responsePromise = axios.get(endPoint);
         return responsePromise;
@@ -28,4 +28,4 @@ class UserProfileModel {
     };
 }
 
-export default UserProfileModel;
+export default ProfileAPI;

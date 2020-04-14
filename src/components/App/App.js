@@ -1,8 +1,7 @@
 import React from 'react';
 import jwt_decode from 'jwt-decode';
 import setAuthHeader from '../../utils/setAuthHeader';
-import NavbarContainer from '../../containers/NavbarContainer';
-import LoginContainer from '../../containers/LoginContainer';
+import Navbar from '../../layout/Navbar';
 import BellmarketContainer from '../../containers/BellmarketContainer';
 import Routes from '../../config/routes';
 import UserApi from '../../api/UserAPI';
@@ -71,7 +70,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="app">
-        <NavbarContainer
+        <Navbar
           logout={this.logout}
           user={this.state.username}
         />
