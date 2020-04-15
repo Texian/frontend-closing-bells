@@ -18,6 +18,7 @@ class Register extends React.Component {
         e.preventDefault();
         let newUser = {
             username: this.state.username,
+            email: this.state.email,
             password: this.state.password
         }
         this.props.register(newUser);

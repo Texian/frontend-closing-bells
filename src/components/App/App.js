@@ -28,6 +28,7 @@ class App extends React.Component {
     UserApi.register(newUser)
     .then(res => {
       if (res.status === 200) {
+        console.log(`App res status: ${res.status}`);
         const token = res.data.token;
         localStorage.setItem('jwtToken', token);
         setAuthHeader(token);
@@ -39,6 +40,7 @@ class App extends React.Component {
       }
     })
     .catch(err => console.log(`User registration error: ${err}`));
+    console.log('New user created')
   }
 
   login = (user) => {
