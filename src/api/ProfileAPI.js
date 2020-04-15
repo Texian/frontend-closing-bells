@@ -12,8 +12,8 @@ class ProfileAPI {
         return responsePromise;
     };
 
-    static create = (user) => {
-        let responsePromise = axios.post(endPoint, user);
+    static create = (newUser) => {
+        let responsePromise = axios.post(endPoint, newUser);
         return responsePromise;
     };
 

@@ -2,7 +2,6 @@ import React from 'react';
 import jwt_decode from 'jwt-decode';
 import setAuthHeader from '../../utils/setAuthHeader';
 import Navbar from '../../layout/Navbar';
-import BellmarketContainer from '../../containers/BellmarketContainer';
 import Routes from '../../config/routes';
 import UserApi from '../../api/UserAPI';
 import './App.css';
@@ -24,8 +23,9 @@ class App extends React.Component {
     }
   }
 
-  register =(user) =>{
-    UserApi.register(user)
+  register = (newUser) =>{
+    console.log(`New user: ${newUser}`);
+    UserApi.register(newUser)
     .then(res => {
       if (res.status === 200) {
         const token = res.data.token;
@@ -56,6 +56,7 @@ class App extends React.Component {
       }
     })
     .catch(err => console.log(`User login error: ${err}`));
+    console.log(`App user: ${user}`);
   }
 
   logout = () => {

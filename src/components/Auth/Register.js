@@ -3,6 +3,7 @@ import React from 'react';
 class Register extends React.Component {
     state = {
         username: '',
+        email: '',
         password: '',
         passwordVerify: ''
     }
@@ -26,8 +27,12 @@ class Register extends React.Component {
         return(
             <div className="register">
                 <form className="login-form" onSubmit={this.handleSubmit}>
-                    <label>Name:
+                    <label>Username:
                         <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                    </label>
+                    <br />
+                    <label>Email:
+                        <input type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
                     </label>
                     <br />
                     <label>Password:
@@ -38,7 +43,7 @@ class Register extends React.Component {
                         <input type="password" name="passwordVerify" value={this.state.passwordVerify} onChange={this.handleChange}/>
                     </label>
                     <br />
-                    <button type="submit">Submit</button>
+                    <button type="submit">Register</button>
                 </form>
             </div>
         )
