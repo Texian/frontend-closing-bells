@@ -73,15 +73,21 @@ class App extends React.Component {
   render() {
     return (
       <div id="app">
+        <aside className="sidenav-main nav-expanded nav-lock navbar-full sidenav-active-rounded">
         <Navbar
+          login={this.login}
+          register={this.register}
           logout={this.logout}
           user={this.state.username}
         />
+        </aside>
+        <div id="main">
         <Routes 
           user={this.state.username}
           login={this.login}
           register={this.register}
         />
+        </div>
       </div>
     )
   }

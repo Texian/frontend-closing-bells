@@ -1,11 +1,11 @@
 import React from 'react';
 import {Route, Redirect, Switch} from 'react-router-dom';
 import Home from '../components/Home/Home';
+import Profile from '../layout/Profile';
 import LoginWindow from '../layout/LoginWindow';
 import RegisterWindow from '../layout/RegisterWindow';
 
 const Routes = (props) => {
-    console.log(`Routes props: ${props}`);
     return (
         <Switch>
             <Route exact path='/' component={Home} />
@@ -23,6 +23,14 @@ const Routes = (props) => {
                     <Redirect to='/users' />
                     :
                     <RegisterWindow register={props.register} />
+                }
+            />
+            <Route path='/user' 
+                render={
+                    () => props.user ?
+                    <Profile  profile={props._id}/>
+                    :
+                    <Redirect to='/login' />
                 }
             />
         </Switch>
