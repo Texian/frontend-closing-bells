@@ -8,7 +8,7 @@ class ProfileAPI {
     };
 
     static getOne = (user) => {
-        let responsePromise = axios.get(`${endpoint}/${props.user._id}`);
+        let responsePromise = axios.get(endPoint, user);
         return responsePromise;
     };
 
@@ -18,12 +18,12 @@ class ProfileAPI {
     };
 
     static delete = (user) => {
-        let responsePromise = axios.delete(`${endpoint}/${props.user._id}`);
+        let responsePromise = axios.delete(endPoint, user);
         return responsePromise;
     };
 
     static update = (user) => {
-        let responsePromise = axios.put(`'${endPoint}/${props.user._id}`);
+        let responsePromise = axios.put(endPoint, user);
         return responsePromise;
     };
 }

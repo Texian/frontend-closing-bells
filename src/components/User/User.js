@@ -1,5 +1,4 @@
 import React from 'react';
-import './User.css';
 
 class User extends React.Component {
     state = {
@@ -8,7 +7,8 @@ class User extends React.Component {
         email: this.props.user.email,
         password: this.props.user.password,
         passwordVerify: '',
-        avatar: this.props.user.avatar
+        avatar: this.props.user.avatar,
+        switchId: this.props.user.switchId
     }
 
     handleEdit = () => {

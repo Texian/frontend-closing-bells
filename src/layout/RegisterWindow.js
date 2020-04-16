@@ -1,6 +1,5 @@
 import React from 'react';
 import Register from '../components/Auth/Register';
-import './Login.scss';
 
 const LoginWindow = (props) => {
     console.log(`Login window props: ${props}`)

@@ -25,14 +25,7 @@ const Routes = (props) => {
                     <RegisterWindow register={props.register} />
                 }
             />
-            <Route path='/user' 
-                render={
-                    () => props.user ?
-                    <Profile  profile={props._id}/>
-                    :
-                    <Redirect to='/login' />
-                }
-            />
+            <Route path='/users' component={Profile} />
         </Switch>
     )
 }

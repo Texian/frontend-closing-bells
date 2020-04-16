@@ -5272,7 +5272,7 @@ nav.display-none.search-sm .nav-wrapper form .input-field i {
 
 @media screen and (-ms-high-contrast: active) and(min-width: 993px), screen and(-ms-high-contrast: none) and(min-width: 993px) {
     ul#slide-out.sidenav {
-        height:calc(100% - 64px) !important
+        height:calc(100%) !important
     }
 }
 
@@ -5295,7 +5295,7 @@ nav.display-none.search-sm .nav-wrapper form .input-field i {
 @-moz-document url-prefix() {
     @media screen and (min-width: 993px) {
         ul#slide-out.sidenav {
-            height:calc(100% - 64px) !important
+            height:calc(100%) !important
         }
     }
 }
@@ -5303,7 +5303,7 @@ nav.display-none.search-sm .nav-wrapper form .input-field i {
 @supports (-ms-ime-align: auto) {
     @media screen and (min-width: 993px) {
         ul#slide-out.sidenav {
-            height:calc(100% - 64px) !important
+            height:calc(100%) !important
         }
     }
 }
