@@ -34,9 +34,7 @@ class ProfileAPI {
     };
 
     static getLoggedIn = () => {
-        let responsePromise = axios.get(endPoint + "/profile", {
-            
-        });
+        let responsePromise = axios.get(endPoint + "/profile");
         return responsePromise;
     }
 }

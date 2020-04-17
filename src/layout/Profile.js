@@ -8,6 +8,7 @@ class Profile extends React.Component {
     };
 
     handleEdit = (user) => {
+        console.log(`Profile handleEdit user: ${user}`);
         ProfileAPI.update(user)
         .then(res => {
             this.setState({
@@ -20,7 +21,7 @@ class Profile extends React.Component {
     componentDidMount() {
         ProfileAPI.getLoggedIn()
         .then(res => {
-            console.log(res);
+            console.log(`CDM response: ${res}`);
             this.setState({
                 user: res.data
             });
@@ -30,7 +31,7 @@ class Profile extends React.Component {
 
     render(){ 
         let user = this.state.user;
-        console.log(user);
+        console.log(`Profile render user: ${user}`);
         if (!user) {
             return (
                 <p>Loading</p>
@@ -54,7 +55,7 @@ class Profile extends React.Component {
                                             <div className="row">
                                                 <div className="col s12">
                                                 <p className="m-0">Switch ID:</p>
-                                                <p className="m-0">1234-5678-90</p> 
+                                                <p className="m-0">{this.user.switchId}</p> 
                                                 </div>
                                             </div>
                                             <div className="row user-projects">
@@ -71,7 +72,7 @@ class Profile extends React.Component {
                                                     <div className="card-content card-border-gray">
                                                         <div className="row">
                                                             <div className="col s12">
-                                                                <h5>{user.username}</h5>
+                                                                <h5>{this.user.username}</h5>
                                                             </div>
                                                         </div>
                                                         <div className="row mt-5">

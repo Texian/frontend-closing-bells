@@ -2,6 +2,12 @@ import axios from 'axios';
 
 const endpoint = 'http://localhost:4000/api/v1/items';
 
+if (localStorage.getItem('jwtToken')){
+    axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
+    } else {
+        delete axios.defaults.headers.common['Authorization'];
+    }
+
 const index = () => {
     return axios.get(endpoint)
     .then(res => res)

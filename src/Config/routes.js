@@ -7,6 +7,7 @@ import RegisterWindow from '../layout/RegisterWindow';
 import BellmarketContainer from '../containers/BellmarketContainer';
 
 const Routes = (props) => {
+    console.log(`Routes user: ${props}`);
     return (
         <Switch>
             <Route exact path='/' component={Home} />

@@ -7,7 +7,6 @@ const setAuthHeader = (JWT) => {
     } else {
         delete axios.defaults.headers.common['Authorization'];
     }
-    console.log(axios.defaults.headers.common['Authorization']);
 }
 
 export default setAuthHeader;
