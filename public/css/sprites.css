@@ -1,0 +1,22 @@
+#itemSprite {
+    position: relative;
+}
+
+#itemSprite div {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+
+#itemSprite div, #itemSprite a {
+    height: 128px;
+    display: block;
+}
+
+#shovelSprite {
+    left: 0px;
+    width: 128px;
+    background: url('../ItemSpriteSheet.png') -5 -5;
+}

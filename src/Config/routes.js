@@ -4,6 +4,7 @@ import Home from '../components/Home/Home';
 import Profile from '../layout/Profile';
 import LoginWindow from '../layout/LoginWindow';
 import RegisterWindow from '../layout/RegisterWindow';
+import BellmarketContainer from '../containers/BellmarketContainer';
 
 const Routes = (props) => {
     return (
@@ -26,6 +27,7 @@ const Routes = (props) => {
                 }
             />
             <Route path='/users' component={Profile} />
+            <Route path='/items' component={BellmarketContainer} />
         </Switch>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileAPI from '../api/ProfileAPI';
+import BellmarketContainer from '../containers/BellmarketContainer';
 
 class Profile extends React.Component {
     state = {
@@ -57,7 +58,7 @@ class Profile extends React.Component {
                                             </div>
                                             <div className="row user-projects">
                                                 <h6 className="col s12">Add New Record</h6>
-                                                <div className="col s12">Turnips 500 bells 2/23/20</div>
+                                                <div className="col s12"><BellmarketContainer /></div>
                                                 <span>
                                                     <button>+</button>
                                                 </span>

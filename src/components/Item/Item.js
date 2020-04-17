@@ -55,9 +55,6 @@ class Item extends React.Component {
                         <label>Date:
                             <input type="text" name="date" value={this.state.date} onChange={this.handleChange}/>
                         </label>
-                        <label>Image:
-                            <input type="text" name="image" value={this.state.image} onChange={this.handleChange}/>
-                        </label>
                         <button onClick={this.handleEdit}>Cancel</button>
                         <button type="submit">Submit</button>
                     </form>

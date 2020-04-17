@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import './ChartData.js';
 
 const Home = () => {
     return(
@@ -9,24 +10,26 @@ const Home = () => {
                     <div className="container">
                         <div className="section">
                             <div className="row vertical-modern-dashboard">
-                                <p>Home page</p>
-                                <div className="col s12 m4 l4">
+                                <h1>CLOSING BELLS</h1>
+                                <div className="col s12 m12 l8">
                                     <div className="card animate fadeLeft">
                                         <div className="card-content">
                                             <h6 className="mb-0 mt-0 display-fex justify-content-between">
                                                 Current Price
                                             </h6>
-                                            <div class="current-balance-container">Item image</div>
+                                            <div id="shovelSprite" class="current-balance-container"></div>
                                             <h5 className="center-align">5000 bells</h5>
                                             <p className="medium-small center-align">Item dropdown menu</p>
                                         </div>
                                     </div>
-                                    <div className="col s12 m8 l8 animate fadeRight">
+                                    <div className="animate fadeRight">
                                         <div className="card">
                                             <div className="card-content">
                                                 <h4 className="card-title mb-0">Price trend</h4>
                                                 <div className="total-transaction-container">
-                                                    <div id="total-transaction-line-chart" className="total-transaction-shadow">SVG Line chart</div>
+                                                    <div id="total-transaction-line-chart" className="total-transaction-shadow">
+                                                    <div id="chartdiv"></div>	
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
