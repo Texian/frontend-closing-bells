@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const endpoint = 'http://localhost:4000/api/v1/items';
+const endpoint = `${process.env.REACT_APP_API_URL}/items`;
 
 if (localStorage.getItem('jwtToken')){
     axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');

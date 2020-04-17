@@ -4,7 +4,7 @@ import BellmarketContainer from '../containers/BellmarketContainer';
 
 class Profile extends React.Component {
     state = {
-        user: null
+        user: ""
     };
 
     handleEdit = (user) => {
