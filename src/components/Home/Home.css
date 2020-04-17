@@ -12,8 +12,8 @@ body {
    stroke-dasharray: 30px 30px;
    stroke-linejoin: round;
    stroke-linecap: round;
-   -webkit-animation: am-moving-dashes 1s linear infinite;
-   animation: am-moving-dashes 1s linear infinite;
+   /* -webkit-animation: am-moving-dashes 1s linear infinite;
+   animation: am-moving-dashes 1s linear infinite; */
  }
  
  @-webkit-keyframes am-moving-dashes {

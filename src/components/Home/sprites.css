@@ -1,0 +1,15 @@
+.itemSprite {
+    position: absolute;
+    margin: 0 0 0 10px;
+    padding: 0;
+    top: 0;
+    left: 0px;
+    width: 128px;
+    height: 128px;
+    display: block;
+    object-fit: none;
+}
+
+#shovelSprite {
+    object-position: -5px -5px;
+}

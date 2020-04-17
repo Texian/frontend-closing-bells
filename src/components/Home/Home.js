@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import './sprites.css';
 import './ChartData.js';
 
 const Home = () => {
@@ -14,10 +15,10 @@ const Home = () => {
                                 <div className="col s12 m12 l8">
                                     <div className="card animate fadeLeft">
                                         <div className="card-content">
-                                            <h6 className="mb-0 mt-0 display-fex justify-content-between">
+                                            <h6 className="mb-0 mt-0 display-fex center-align justify-content-between">
                                                 Current Price
                                             </h6>
-                                            <div id="shovelSprite" class="current-balance-container"></div>
+                                            <img className="itemSprite" id="shovelSprite" src={require("../../img/ItemSpriteSheet.png")}/>
                                             <h5 className="center-align">5000 bells</h5>
                                             <p className="medium-small center-align">Item dropdown menu</p>
                                         </div>
@@ -34,8 +35,7 @@ const Home = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
+                                </div>  
                             </div>
                         </div>
                     </div>
