@@ -1,6 +1,12 @@
 import axios from 'axios';
 const endPoint = 'http://localhost:4000/api/v1/users';
 
+if (localStorage.getItem('jwtToken')){
+axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
+} else {
+    delete axios.defaults.headers.common['Authorization'];
+}
+
 class ProfileAPI {
     static getAll = () => {
         let responsePromise = axios.get(endPoint);
@@ -26,6 +32,13 @@ class ProfileAPI {
         let responsePromise = axios.put(endPoint, user);
         return responsePromise;
     };
+
+    static getLoggedIn = () => {
+        let responsePromise = axios.get(endPoint + "/profile", {
+            
+        });
+        return responsePromise;
+    }
 }
 
 export default ProfileAPI;

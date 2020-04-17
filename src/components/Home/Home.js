@@ -20,7 +20,14 @@ const Home = () => {
                                             </h6>
                                             <img className="itemSprite" id="shovelSprite" src={require("../../img/ItemSpriteSheet.png")}/>
                                             <h5 className="center-align">5000 bells</h5>
-                                            <p className="medium-small center-align">Item dropdown menu</p>
+                                            <button id="dropdown"><a className="center-align dropdown-trigger.btn" href="#" data-target='dropdown1'>Select an Item</a></button>
+                                            <ul id="dropdown1" className="dropdown-content">
+                                                <li><a href="#!">Shovel</a></li>
+                                                <li><a href="#!">Tarantula</a></li>
+                                                <li><a href="#!">Peach</a></li>
+                                                <li><a href="#!">Seabass</a></li>
+                                                <li><a href="#!">Net</a></li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div className="animate fadeRight">

@@ -78,12 +78,12 @@ class App extends React.Component {
           login={this.login}
           register={this.register}
           logout={this.logout}
-          user={this.login}
+          user={this.state.username}
         />
         </aside>
         <div id="main">
         <Routes 
-          user={this.login}
+          user={this.state.username}
           login={this.login}
           register={this.register}
         />

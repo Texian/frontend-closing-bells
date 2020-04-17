@@ -18,13 +18,14 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-        ProfileAPI.getOne()
+        ProfileAPI.getLoggedIn()
         .then(res => {
+            console.log(res);
             this.setState({
                 user: res.data
             });
         })
-        .catch(err => `User find error: ${err}`);
+        .catch(err => console.log(`User find error: ${err}`));
     }
 
     render(){ 
