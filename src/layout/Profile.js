@@ -38,33 +38,13 @@ class Profile extends React.Component {
         else {
         return(
             <div className="profile">
-                <div className="row">
+                <div className="row" style={{float: "right"}}>
                     <div className="col s12">
                         <div className="container">
                             <div className="section">
                                 <div id="user-profile" className="section">
                                     <div className="row">
-                                        <div className="col s12 m4 l3 user-section-negative-margin">
-                                            <div className="row">
-                                                <div className="col s12 center-align">
-                                                    <img className="responsive-img circle z-depth-5" src="" alt="" width="120"/>
-                                                </div>
-                                            </div>
-                                            <div className="row">
-                                                <div className="col s12">
-                                                <p className="m-0">Switch ID:</p>
-                                                <p className="m-0">{this.state.user.username}</p> 
-                                                </div>
-                                            </div>
-                                            <div className="row user-projects">
-                                                <h6 className="col s12">Add New Record</h6>
-                                                <div className="col s12"><BellmarketContainer /></div>
-                                                <span>
-                                                    <button>+</button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div className="col s12 m8 l6">
+                                    <div className="col s12 m8 l6">
                                             <div className="row">
                                                 <div id="feed" className="card user-card-negative-margin z-depth-0">
                                                     <div className="card-content card-border-gray">
@@ -98,6 +78,27 @@ class Profile extends React.Component {
                                                         <hr className="mt-5"/>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    
+                                    <div className="col s12 m4 l3 user-section-negative-margin">
+                                            <div className="row">
+                                                <div className="col s12 center-align">
+                                                    <img className="responsive-img circle z-depth-5" src="" alt="" width="120"/>
+                                                </div>
+                                            </div>
+                                            <div className="row">
+                                                <div className="col s12">
+                                                <p className="m-0">Switch ID:</p>
+                                                <p className="m-0">{this.state.user.username}</p> 
+                                                </div>
+                                            </div>
+                                            <div className="row user-projects">
+                                                <h6 className="col s12">Add New Record</h6>
+                                                <div className="col s12"><BellmarketContainer /></div>
+                                                <span>
+                                                    <button>+</button>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
