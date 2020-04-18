@@ -4,7 +4,7 @@ import BellmarketContainer from '../containers/BellmarketContainer';
 
 class Profile extends React.Component {
     state = {
-        user: ""
+        user: ''
     };
 
     handleEdit = (user) => {
@@ -21,7 +21,7 @@ class Profile extends React.Component {
     componentDidMount() {
         ProfileAPI.getLoggedIn()
         .then(res => {
-            console.log(`CDM response: ${res}`);
+            console.log(`CDM response: ${res.data.username}`);
             this.setState({
                 user: res.data
             });
@@ -30,14 +30,12 @@ class Profile extends React.Component {
     }
 
     render(){ 
-        let user = this.state.user;
-        console.log(`Profile render user: ${user}`);
-        if (!user) {
+        if (!this.state.user) {
             return (
                 <p>Loading</p>
             );
         }
-
+        else {
         return(
             <div className="profile">
                 <div className="row">
@@ -55,7 +53,7 @@ class Profile extends React.Component {
                                             <div className="row">
                                                 <div className="col s12">
                                                 <p className="m-0">Switch ID:</p>
-                                                <p className="m-0">{this.user.switchId}</p> 
+                                                <p className="m-0">{this.state.user.username}</p> 
                                                 </div>
                                             </div>
                                             <div className="row user-projects">
@@ -72,7 +70,7 @@ class Profile extends React.Component {
                                                     <div className="card-content card-border-gray">
                                                         <div className="row">
                                                             <div className="col s12">
-                                                                <h5>{this.user.username}</h5>
+                                                                <h5>{this.state.user.username}</h5>
                                                             </div>
                                                         </div>
                                                         <div className="row mt-5">
@@ -111,6 +109,7 @@ class Profile extends React.Component {
             </div>
         )
     }
+}
 }
 
 export default Profile;
