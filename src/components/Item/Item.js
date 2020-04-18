@@ -63,12 +63,21 @@ class Item extends React.Component {
                 {
                     !this.state.isEditing &&
                     <>
-                    <p>Name: {this.props.item.name}</p>
-                    <p>Price: {this.props.item.price}</p>
-                    <p>Date: {this.props.item.date}</p>
-                    {this.props.item.image && <img src={this.props.item.image} alt={this.props.item.name}></img>}
-                    <button onClick={this.handleEdit}>Edit</button>
-                    <button onClick={() => this.props.handleDelete(this.props.item._id)}>Delete</button>
+                    <div className="row">
+                        <div className="col s9">
+                            <h5>Name: {this.props.item.name}</h5>
+                            <h6>Price: {this.props.item.price}</h6>
+                            <h6>Date: {this.props.item.date}</h6>
+                        </div>
+                        <div className="col s3 right-align">
+                            <img className="responsive-img circle z-depth-5" src="" alt="" height="128"/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {this.props.item.image && <img src={this.props.item.image} alt={this.props.item.name}></img>}
+                        <button onClick={this.handleEdit}>Edit</button>
+                        <button onClick={() => this.props.handleDelete(this.props.item._id)}>Delete</button>
+                    </div>
                     </>
                 }
             </div>

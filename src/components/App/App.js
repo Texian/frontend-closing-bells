@@ -8,8 +8,12 @@ import './App.css';
 
 class App extends React.Component {
   state = {
+    id: '',
     username: '',
-    id: ''
+    email: '',
+    avatar: '',
+    switchId: '',
+    items: ''
   }
 
   componentDidMount() {
@@ -17,8 +21,12 @@ class App extends React.Component {
       setAuthHeader(localStorage.jwtToken);
       const decoded = jwt_decode(localStorage.getItem('jwtToken'));
       this.setState({
+        id: decoded._id,
         username: decoded.username,
-        id: decoded._id
+        email: decoded.email,
+        avatar: decoded.avatar,
+        switchId: decoded.switchId,
+        items: decoded.items
       })
     }
   }
@@ -34,8 +42,9 @@ class App extends React.Component {
         setAuthHeader(token);
         const decoded = jwt_decode(token);
         this.setState({
+          id: decoded._id,
           username: decoded.username,
-          id: decoded._id
+          
         })
       }
     })
@@ -52,8 +61,12 @@ class App extends React.Component {
         setAuthHeader(token);
         const decoded = jwt_decode(token);
         this.setState({
+          id: decoded._id,
           username: decoded.username,
-          id: decoded._id
+          email: decoded.email,
+          avatar: decoded.avatar,
+          switchId: decoded.switchId,
+          items: decoded.items
         })
       }
     })
@@ -65,8 +78,12 @@ class App extends React.Component {
     localStorage.removeItem('jwtToken');
     setAuthHeader();
     this.setState({
+      id: '',
       username: '',
-      id: ''
+      email: '',
+      avatar: '',
+      switchId: '',
+      items: ''
     })
   }
 
