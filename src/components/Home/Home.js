@@ -2,6 +2,12 @@ import React from 'react';
 import './Home.css';
 import './sprites.css';
 import './ChartData.js';
+import M from 'materialize-css';
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+  });
 
 const Home = () => {
     return(
@@ -13,7 +19,7 @@ const Home = () => {
                             <div className="row vertical-modern-dashboard center-align">
                                 <h1 className="center-align">CLOSING BELLS</h1>
                                 <div className="col s12 m12 l12">
-                                    <div className="card animate fadeLeft">
+                                    <div className="card animate fadeLeft" style={{zIndex: "10"}}>
                                         <div className="card-content row valign-wrapper">
                                             <div className="col s3">
                                                 <img className="itemSprite" id="shovelSprite" src={require("../../img/ItemSpriteSheet.png")}/>
@@ -34,14 +40,12 @@ const Home = () => {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="animate fadeRight">
-                                        <div className="card">
-                                            <div className="card-content">
-                                                <h4 className="card-title mb-0">Price trend</h4>
-                                                <div className="total-transaction-container">
-                                                    <div id="total-transaction-line-chart" className="total-transaction-shadow">
-                                                    <div id="chartdiv"></div>	
-                                                    </div>
+                                    <div className="card animate fadeRight" style={{zIndex: "1"}}>
+                                        <div className="card-content">
+                                            <h4 className="card-title mb-0">Price trend</h4>
+                                            <div className="total-transaction-container">
+                                                <div id="total-transaction-line-chart" className="total-transaction-shadow">
+                                                <div id="chartdiv"></div>	
                                                 </div>
                                             </div>
                                         </div>

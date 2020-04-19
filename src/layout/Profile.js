@@ -1,8 +1,8 @@
 import React from 'react';
 import ProfileAPI from '../api/ProfileAPI';
 import BellmarketContainer from '../containers/BellmarketContainer';
-import User from '../components/User/User';
 import '../components/Home/sprites.css';
+import {Dropdown} from 'react-materialize';
 
 class Profile extends React.Component {
     /* Original code
@@ -29,7 +29,7 @@ class Profile extends React.Component {
                 user: res.data
             });
         })
-        .catch(err => console.log(`User find error: ${err}`));
+        .catch(err => console.log(`User find error: ${err}`));  
     }
 
 /* experimental code  */
@@ -143,14 +143,20 @@ class Profile extends React.Component {
                                                 <div className="row">
                                                     <div className="col s12">
                                                         <h5>Add New Record</h5>
-                                                            <div className="card card-border z-depth-2">
+                                                            <div className="card card-border" style={{zIndex: "10"}}>
                                                                 <div className="card-content row center-align">
                                                                     <div className="col s4">
                                                                         <img className="itemSprite" id="shovelSprite" src={require("../img/ItemSpriteSheet.png")}/>
                                                                     </div>
                                                                     <form onSubmit={this.submitEdit}>
                                                                         <div className="col s6 offset-s6">
-                                                                            <a className="dropdown-trigger btn waves-effect waves-light gradient-45deg-light-blue-cyan mr-1 mb-1 border-round" href="#" data-target='dropdown1'>Select</a>
+                                                                            <Dropdown trigger={<a className="dropdown-trigger btn waves-effect waves-light gradient-45deg-light-blue-cyan mr-1 mb-1 border-round" href="#" data-target='dropdown1'>Select</a>}>
+                                                                                <a href="#!">Shovel</a>
+                                                                                <a href="#!">Tarantula</a>
+                                                                                <a href="#!">Peach</a>
+                                                                                <a href="#!">Seabass</a>
+                                                                                <a href="#!">Net</a>
+                                                                            </Dropdown>
                                                                             <h6 className="font-weight-900 text-uppercase">this.name</h6>
                                                                             <label>Price:
                                                                                 <input type="text" name="price" value={this.state.price} onChange={this.handleChange}/>

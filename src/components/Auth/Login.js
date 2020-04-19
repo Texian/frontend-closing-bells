@@ -1,7 +1,5 @@
 import React from 'react';
-
-// import fb from './Buttons/FBLogin';
-
+// import './LoginAnimate';
 class Login extends React.Component {
     state = {
     username: '',
