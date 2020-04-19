@@ -56,7 +56,7 @@ class Item extends React.Component {
                         <label>Date:
                             <input type="text" name="date" value={this.state.date} onChange={this.handleChange}/>
                         </label>
-                        <a className="col s4 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" onClick={this.handleEdit}>Cancel</a>
+                        <a className="col s4 offset-s2 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" onClick={this.handleEdit}>Cancel</a>
                         <a className="btn waves-effect waves-light gradient-45deg-green-teal mr-1 mb-1 border-round" onClick={this.submitEdit}>Submit</a>
                     </form>
                     </>
