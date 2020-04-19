@@ -44,6 +44,7 @@ class Item extends React.Component {
                 {
                     this.state.isEditing &&
                     <>
+                    <div className="container">
                     <form onSubmit={this.submitEdit}>
                         <label>Name:
                             <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
@@ -56,9 +57,12 @@ class Item extends React.Component {
                         <label>Date:
                             <input type="text" name="date" value={this.state.date} onChange={this.handleChange}/>
                         </label>
-                        <a className="col s4 offset-s2 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" onClick={this.handleEdit}>Cancel</a>
-                        <a className="btn waves-effect waves-light gradient-45deg-green-teal mr-1 mb-1 border-round" onClick={this.submitEdit}>Submit</a>
+                        <div className="row">
+                            <a className="col s4 offset-s2 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" style={{marginRight: "6px"}} onClick={this.handleEdit}>Cancel</a>
+                            <a className="col s4 btn waves-effect waves-light gradient-45deg-green-teal mr-1 mb-1 border-round" style={{marginLeft: "6px"}} onClick={this.submitEdit}>Submit</a>
+                        </div>
                     </form>
+                    </div>
                     </>
                 }
                 {
@@ -75,8 +79,8 @@ class Item extends React.Component {
                         </div>
                     </div>
                     <div className="row ">                        
-                        <a className="col s4 offset-s2 btn waves-effect waves-light gradient-45deg-amber-amber mr-1 mb-1 border-round" onClick={this.handleEdit}>Edit</a>
-                        <a className="col s4 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" onClick={() => this.props.handleDelete(this.props.item._id)}>Delete</a>  
+                        <a className="col s4 offset-s2 btn waves-effect waves-light gradient-45deg-amber-amber mr-1 mb-1 border-round" style={{marginRight: "6px"}} onClick={this.handleEdit}>Edit</a>
+                        <a className="col s4 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" style={{marginLeft: "6px"}} onClick={() => this.props.handleDelete(this.props.item._id)}>Delete</a>  
                     </div>
                     </>
                 }

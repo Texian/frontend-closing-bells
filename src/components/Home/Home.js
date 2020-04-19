@@ -5,20 +5,24 @@ import './ChartData.js';
 
 const Home = () => {
     return(
-        <div id="main">
-            <div className="home row">
+        <div>
+            <div className="row">
                 <div className="col s12">
                     <div className="container">
                         <div className="section">
-                            <div className="row vertical-modern-dashboard">
-                                <h1>CLOSING BELLS</h1>
-                                <div className="col s12 m12 l8">
+                            <div className="row vertical-modern-dashboard center-align">
+                                <h1 className="center-align">CLOSING BELLS</h1>
+                                <div className="col s12 m12 l12">
                                     <div className="card animate fadeLeft">
-                                        <div className="card-content row right-align">
-                                            <img className="itemSprite" id="shovelSprite" src={require("../../img/ItemSpriteSheet.png")}/>
-                                            <div className="justify-right">
-                                                <h6 className="mb-0 mt-0 display-fex center-align justify-content-between">Current Price</h6>
-                                                <h5 className="center-align">5000 bells</h5>
+                                        <div className="card-content row valign-wrapper">
+                                            <div className="col s3">
+                                                <img className="itemSprite" id="shovelSprite" src={require("../../img/ItemSpriteSheet.png")}/>
+                                            </div>
+                                            <div className="col s6">
+                                                <h4 className="mb-0 mt-0 display-fex center-align justify-content-between">Current Price</h4>
+                                                <h5 className="center-align">this.price bells</h5>
+                                            </div>
+                                            <div className="col s3">
                                                 <a className="dropdown-trigger btn-large waves-effect waves-light gradient-45deg-light-blue-cyan mr-1 mb-1 border-round hoverable" href="#" data-target='dropdown1'>Select</a>
                                             </div>
                                             <ul id="dropdown1" className="dropdown-content">

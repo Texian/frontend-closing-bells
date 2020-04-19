@@ -1,19 +1,26 @@
 import React from 'react';
+import ProfileAPI from '../../api/ProfileAPI';
 
 class User extends React.Component {
     state = {
         isEditing: false,
-        username: this.props.user.username,
-        email: this.props.user.email,
-        password: this.props.user.password,
+        username: '',
+        email: '',
+        password: '',
         passwordVerify: '',
-        avatar: this.props.user.avatar,
-        switchId: this.props.user.switchId
+        avatar: '',
+        switchId: ''
     }
 
-    handleEdit = () => {
-        this.setState({
-            isEditing: !this.state.isEditing
+    handleEdit = (user) => {
+        ProfileAPI.update(user)
+        .then(res => {
+            let users = this.state.users;
+            let userToUpdate = users.findIndex(user => user._id === res.data._id);
+            users[userToUpdate] = res.data;
+            this.setState({
+                users
+            })
         })
     }
 
@@ -26,7 +33,7 @@ class User extends React.Component {
     submitEdit = (e) => {
         e.preventDefault();
         let userToUpdate = {
-            _id: this.props.user._id,
+            _id: this.state.user._id,
             username: this.state.username,
             email: this.state.email,
             password: this.state.password,
@@ -41,7 +48,7 @@ class User extends React.Component {
 
     render() {
         return(
-            <div className="user">
+            <div className="row user">
                 {
                     this.state.isEditing &&
                     <>
@@ -72,12 +79,17 @@ class User extends React.Component {
                 {
                     !this.state.isEditing &&
                     <>
-                    {this.props.user.avatar && <img src={this.props.user.avatar} alt={this.props.user.username}></img>}
-                    <p>Username: {this.props.user.username}</p>
-                    <p>Email: {this.props.user.email}</p>
-                    <p>Password: {this.props.user.password}</p>
-                    <button onClick={this.handleEdit}>Edit</button>
-                    <button onClick={() => this.props.handleDelete(this.props.user._id)}>Delete</button>
+                    <div className="row">
+                        <div className="col s9">
+                            <h5>{this.state.user.username}</h5>
+                            <h6>{this.state.user.email}</h6>
+                            <h6>Switch ID: {this.state.user.switchId}</h6>
+                        </div>
+                        <div className="col s3 right-align">
+                            <img className="responsive-img circle z-depth-5" src="" alt="" height="128"/>
+                        </div>
+                    </div>
+                    <a className="col s2 offset-s10 btn-small waves-effect waves-light gradient-45deg-amber-amber mr-1 mb-1 border-round" onClick={this.handleEdit}>Edit</a>
                     </>
                 }
             </div>

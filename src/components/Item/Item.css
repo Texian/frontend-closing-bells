@@ -1,8 +1,9 @@
 .items {
     margin-top: 15px;
     background-color: rgba(210, 158, 235, 0.815);
-    min-height: 505px;
+    min-height: 505px !important;
     max-height: 95%vh;
+
 }
 
 .item {
@@ -12,6 +13,7 @@
 }
 
 #profile {
-    height: 505px;
+    height: 505px !important;
+    padding-bottom: 17px;
 }
 
