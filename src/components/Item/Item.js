@@ -39,7 +39,8 @@ class Item extends React.Component {
 
     render() {
         return(
-            <div className="item">
+            
+            <div className="card item">
                 {
                     this.state.isEditing &&
                     <>
@@ -55,28 +56,27 @@ class Item extends React.Component {
                         <label>Date:
                             <input type="text" name="date" value={this.state.date} onChange={this.handleChange}/>
                         </label>
-                        <button onClick={this.handleEdit}>Cancel</button>
-                        <button type="submit">Submit</button>
+                        <a className="col s4 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" onClick={this.handleEdit}>Cancel</a>
+                        <a className="btn waves-effect waves-light gradient-45deg-green-teal mr-1 mb-1 border-round" onClick={this.submitEdit}>Submit</a>
                     </form>
                     </>
                 }
                 {
                     !this.state.isEditing &&
                     <>
-                    <div className="row">
+                    <div className="item row">
                         <div className="col s9">
-                            <h5>Name: {this.props.item.name}</h5>
-                            <h6>Price: {this.props.item.price}</h6>
-                            <h6>Date: {this.props.item.date}</h6>
+                            <h5>{this.props.item.name}</h5>
+                            <h6>{this.props.item.price} Bells</h6>
+                            <h6>On: <script src="moment.js">moment().format({this.props.item.date});</script></h6>
                         </div>
                         <div className="col s3 right-align">
                             <img className="responsive-img circle z-depth-5" src="" alt="" height="128"/>
                         </div>
                     </div>
-                    <div className="row">
-                        {this.props.item.image && <img src={this.props.item.image} alt={this.props.item.name}></img>}
-                        <button onClick={this.handleEdit}>Edit</button>
-                        <button onClick={() => this.props.handleDelete(this.props.item._id)}>Delete</button>
+                    <div className="row center">                        
+                        <a className="col s4 btn waves-effect waves-light gradient-45deg-amber-amber mr-1 mb-1 border-round" onClick={this.handleEdit}>Edit</a>
+                        <a className="col s4 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" onClick={() => this.props.handleDelete(this.props.item._id)}>Delete</a>  
                     </div>
                     </>
                 }

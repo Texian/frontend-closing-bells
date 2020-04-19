@@ -1,3 +1,16 @@
+.items {
+    margin-top: 15px;
+    background-color: rgba(210, 158, 235, 0.815);
+    min-height: 505px;
+    max-height: 95%vh;
+}
+
 .item {
-    background-color: plum;
+    margin-bottom: 7px;
+    background-color: rgba(167, 134, 199, 0.95);
+    padding-bottom: 5px !important; 
+}
+
+#profile {
+    height: 505px;
 }

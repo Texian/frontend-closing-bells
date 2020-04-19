@@ -14,13 +14,13 @@ const Home = () => {
                                 <h1>CLOSING BELLS</h1>
                                 <div className="col s12 m12 l8">
                                     <div className="card animate fadeLeft">
-                                        <div className="card-content">
-                                            <h6 className="mb-0 mt-0 display-fex center-align justify-content-between">
-                                                Current Price
-                                            </h6>
+                                        <div className="card-content row right-align">
                                             <img className="itemSprite" id="shovelSprite" src={require("../../img/ItemSpriteSheet.png")}/>
-                                            <h5 className="center-align">5000 bells</h5>
-                                            <button id="dropdown"><a className="center-align dropdown-trigger.btn" href="#" data-target='dropdown1'>Select an Item</a></button>
+                                            <div className="justify-right">
+                                                <h6 className="mb-0 mt-0 display-fex center-align justify-content-between">Current Price</h6>
+                                                <h5 className="center-align">5000 bells</h5>
+                                                <a className="dropdown-trigger btn-large waves-effect waves-light gradient-45deg-light-blue-cyan mr-1 mb-1 border-round hoverable" href="#" data-target='dropdown1'>Select</a>
+                                            </div>
                                             <ul id="dropdown1" className="dropdown-content">
                                                 <li><a href="#!">Shovel</a></li>
                                                 <li><a href="#!">Tarantula</a></li>
