@@ -68,14 +68,14 @@ class Item extends React.Component {
                         <div className="col s9">
                             <h5>{this.props.item.name}</h5>
                             <h6>{this.props.item.price} Bells</h6>
-                            <h6>On: <script src="moment.js">moment().format({this.props.item.date});</script></h6>
+                            <h6>On: {this.props.item.date}</h6>
                         </div>
                         <div className="col s3 right-align">
                             <img className="responsive-img circle z-depth-5" src="" alt="" height="128"/>
                         </div>
                     </div>
-                    <div className="row center">                        
-                        <a className="col s4 btn waves-effect waves-light gradient-45deg-amber-amber mr-1 mb-1 border-round" onClick={this.handleEdit}>Edit</a>
+                    <div className="row ">                        
+                        <a className="col s4 offset-s2 btn waves-effect waves-light gradient-45deg-amber-amber mr-1 mb-1 border-round" onClick={this.handleEdit}>Edit</a>
                         <a className="col s4 btn waves-effect waves-light gradient-45deg-red-pink mr-1 mb-1 border-round" onClick={() => this.props.handleDelete(this.props.item._id)}>Delete</a>  
                     </div>
                     </>
