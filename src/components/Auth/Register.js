@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.scss';
 
 class Register extends React.Component {
     state = {
@@ -26,7 +27,7 @@ class Register extends React.Component {
 
     render() {
         return(
-            <div className="register">
+            <div className="container col z-depth-4 card-panel border-radius-6 login-card bg-opacity-8">
                 <form className="login-form" onSubmit={this.handleSubmit}>
                     <label>Username:
                         <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>

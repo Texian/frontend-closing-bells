@@ -8,14 +8,34 @@ body {
      background-color: #99df8c;  
  }
  
- .amcharts-graph-g2 .amcharts-graph-stroke {
-   stroke-dasharray: 30px 30px;
+.amcharts-graph-g2 .amcharts-graph-stroke {
+   /* stroke-dasharray: 5px 5px; */
    stroke-linejoin: round;
    stroke-linecap: round;
    /* -webkit-animation: am-moving-dashes 1s linear infinite;
    animation: am-moving-dashes 1s linear infinite; */
- }
+  stroke-dasharray: 500%;
+  -webkit-animation: am-draw 24s;
+  animation: am-draw 24s;
+}
  
+@-webkit-keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+@keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+
  @-webkit-keyframes am-moving-dashes {
    100% {
      stroke-dashoffset: -31px;
@@ -29,8 +49,8 @@ body {
  
  
  .lastBullet {
-   -webkit-animation: am-pulsating 1s ease-out infinite;
-   animation: am-pulsating 1s ease-out infinite;
+   -webkit-animation: am-pulsating 2.2s ease-out infinite;
+   animation: am-pulsating 2.2s ease-out infinite;
  }
  @-webkit-keyframes am-pulsating {
    0% {

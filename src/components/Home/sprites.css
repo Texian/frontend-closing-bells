@@ -9,6 +9,7 @@
     height: 128px;
     display: block;
     object-fit: none;
+    transition: all .2s ease;
 }
 
 #itemSpriteHome {
@@ -16,12 +17,29 @@
     height: 128px;
     display: block;
     object-fit: none;
+    transition: all .2s ease;
 }
 
 .nothing {
-    object-position: -2531px -2930px;
+    object-position: -2665px -5px;
+}
+
+.tarantula {
+    object-position: -2665px -2798px;
+}
+
+.peach {
+    object-position: -537px -1202px;
+}
+
+.lionfish {
+    object-position: -537px -2266px;
 }
 
 .shovel {
     object-position: -5px -5px;
+}
+
+.net {
+    object-position: -138px -5px;
 }

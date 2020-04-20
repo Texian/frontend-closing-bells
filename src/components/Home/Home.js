@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 class Home extends React.Component {
 
     state = {
-        itemSprite: 'nothing'
+        itemSprite: 'shovel'
     }
 
     spriteSwap = (event) => {
@@ -45,10 +45,10 @@ class Home extends React.Component {
                                             </div>
                                             <ul id="dropdown1" className="dropdown-content">
                                                 <li><a name="shovel" onClick={this.spriteSwap}>Shovel</a></li>
-                                                <li><a href="#!">Tarantula</a></li>
-                                                <li><a href="#!">Peach</a></li>
-                                                <li><a href="#!">Seabass</a></li>
-                                                <li><a href="#!">Net</a></li>
+                                                <li><a name="net" onClick={this.spriteSwap}>Net</a></li>
+                                                <li><a name="tarantula" onClick={this.spriteSwap}>Tarantula</a></li>
+                                                <li><a name="peach" onClick={this.spriteSwap}>Peach</a></li>
+                                                <li><a name="lionfish" onClick={this.spriteSwap}>Lion Fish</a></li>
                                             </ul>
                                         </div>
                                     </div>

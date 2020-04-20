@@ -144,10 +144,10 @@ class Profile extends React.Component {
                                                                         <div className="col s6 offset-s6">
                                                                             <Dropdown trigger={<a className="dropdown-trigger btn waves-effect waves-light gradient-45deg-light-blue-cyan mr-1 mb-1 border-round" href="#" data-target='dropdown1'>Select</a>}>
                                                                                 <a name="shovel" onClick={this.spriteSwap}>Shovel</a>
-                                                                                <a href="#!">Tarantula</a>
-                                                                                <a href="#!">Peach</a>
-                                                                                <a href="#!">Seabass</a>
-                                                                                <a href="#!">Net</a>
+                                                                                <a name="net" onClick={this.spriteSwap}>Net</a>
+                                                                                <a name="tarantula" onClick={this.spriteSwap}>Tarantula</a>
+                                                                                <a name="peach" onClick={this.spriteSwap}>Peach</a>
+                                                                                <a name="lionfish" onClick={this.spriteSwap}>Lion Fish</a>
                                                                             </Dropdown>
                                                                             <h6 className="font-weight-900 text-uppercase">{this.state.itemSprite}</h6>
                                                                             <label>Price:

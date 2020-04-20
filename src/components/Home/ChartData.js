@@ -2,91 +2,92 @@ import AmCharts from "@amcharts/amcharts3-react";
 
 const chartData = [
     {
-        "date": "2012-01-01",
+        "date": "2020-01-01",
         "price": 227,
-        "item": "New York",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-02",
+        "date": "2020-01-02",
         "price": 371,
-        "item": "Washington",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-03",
+        "date": "2020-01-02",
         "price": 433,
-        "item": "Wilmington",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-04",
+        "date": "2020-01-02",
         "price": 345,
-        "item": "Jacksonville",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-05",
+        "date": "2020-01-05",
         "price": 480,
-        "item": "Miami",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-06",
+        "date": "2020-01-06",
         "price": 386,
-        "item": "Tallahassee",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-07",
+        "date": "2020-01-07",
         "price": 348,
-        "item": "New Orleans",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-08",
+        "date": "2020-01-08",
         "price": 238,
-        "item": "Houston",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-09",
+        "date": "2020-01-09",
         "price": 218,
-        "item": "Dalas",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-10",
+        "date": "2020-01-10",
         "price": 349,
-        "item": "Oklahoma City",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-11",
+        "date": "2020-01-11",
         "price": 603,
-        "item": "Kansas City",
+        "item": "Shovel",
+        "bulletClass": "lastBullet"
     },
     {
-        "date": "2012-01-12",
+        "date": "2020-01-12",
         "price": 534,
-        "item": "Denver",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-13",
+        "date": "2020-01-13",
         "price": 425,
-        "item": "Salt Lake City",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-13",
+        "date": "2020-01-13",
         "price": 45,
-        "item": "Salt Lake City",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-13",
+        "date": "2020-01-13",
         "price": 5,
-        "item": "Salt Lake City",
+        "item": "Shovel",
     },
     {
-        "date": "2012-01-14",
+        "date": "2020-01-14",
         "price": 470,
-        "item": "Tarantula",
-        "bulletClass": "lastBullet"
+        "item": "Shovel",
+
     },
     {
-        "date": "2012-01-14",
+        "date": "2020-01-14",
         "price": 40,
-        "item": "Tarantula",
-        "bulletClass": "lastBullet"
+        "item": "Shovel",
+
     }
 ];
 

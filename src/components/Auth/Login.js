@@ -1,4 +1,6 @@
 import React from 'react';
+import './Login.scss'
+
 // import './LoginAnimate';
 class Login extends React.Component {
     state = {
@@ -49,11 +51,11 @@ class Login extends React.Component {
                             onChange={this.handleChange} />
                             <label>Password</label>
                             <div className="cursor"></div>
-                            <div className="line">
+                            {/* <div className="line">
                               <svg>
                                   <use xlinkHref={`#line`} />
                               </svg>
-                            </div>
+                            </div> */}
                             <div class="tick">
                               <svg>
                                   <use xlinkHref={`#tick`} />
