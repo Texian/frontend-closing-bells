@@ -4,7 +4,7 @@ import Home from '../components/Home/Home';
 import Profile from '../layout/Profile';
 import LoginWindow from '../layout/LoginWindow';
 import RegisterWindow from '../layout/RegisterWindow';
-import BellmarketContainer from '../Containers/BellmarketContainer';
+import BellmarketContainer from '../layout/BellmarketContainer';
 
 const Routes = (props) => {
     console.log(`Routes user: ${props}`);
