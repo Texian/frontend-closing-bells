@@ -2555,8 +2555,8 @@ table span.badge {
  }
 }
 .col .row {
- margin-left:-.75rem;
- margin-right:-.75rem
+ margin-left:-.0rem;
+ margin-right:-.0rem
 }
 .section {
  padding-top:1rem;
@@ -3866,7 +3866,7 @@ small {
  right:0;
  top:0;
  bottom:0;
- width:100%
+
 }
 .card .card-image .card-title {
  color:#fff;

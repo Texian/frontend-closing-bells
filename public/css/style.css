@@ -106,7 +106,7 @@ select {
     }
 
     #main {
-        padding-left:125px;
+        padding-left:250px;
     }
 
     #main.main-full {
@@ -5846,7 +5846,8 @@ table.bordered td, table.bordered th {
 }
 
 .card {
-    margin:1rem 0
+    margin:1rem 0;
+    border-radius: 50px;
 }
 
 .card .card-title {

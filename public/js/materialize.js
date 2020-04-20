@@ -1124,6 +1124,7 @@ document.addEventListener('keyup', docHandleKeyup, true);
 document.addEventListener('focus', docHandleFocus, true);
 document.addEventListener('blur', docHandleBlur, true);
 
+
 /**
  * Initialize jQuery wrapper for plugin
  * @param {Class} plugin  javascript class
