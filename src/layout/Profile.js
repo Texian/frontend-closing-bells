@@ -5,22 +5,6 @@ import '../components/Home/sprites.css';
 import {Dropdown} from 'react-materialize';
 
 class Profile extends React.Component {
-    /* Original code
-    state = {
-        user: ''
-    };
-
-    
-    handleEdit = (user) => {
-        ProfileAPI.update(user)
-        .then(res => {
-            this.setState({
-                user: res.data
-            });
-        })
-        .catch(err => `User edit error: ${err}`);
-    }
-*/
 
     componentDidMount() {
         ProfileAPI.getLoggedIn()
@@ -32,49 +16,57 @@ class Profile extends React.Component {
         .catch(err => console.log(`User find error: ${err}`));  
     }
 
-/* experimental code  */
+    state = {
+        isEditing: false,
+        _id: '',
+        username: '',
+        email: '',
+        password: '',
+        passwordVerify: '',
+        avatar: '',
+        switchId: '',
+        itemSprite: 'nothing'
+    }
 
-            state = {
-                isEditing: false,
-                username: '',
-                email: '',
-                password: '',
-                passwordVerify: '',
-                avatar: '',
-                switchId: ''
-            }
-            handleEdit = (user) => {
-                ProfileAPI.update(user)
-                .then(res => {
-                    let users = this.state.users;
-                    let userToUpdate = users.findIndex(user => user._id === res.data._id);
-                    users[userToUpdate] = res.data;
-                    this.setState({
-                        users
-                    })
-                })
-            }
-            handleChange = (event) => {
-                this.setState({
-                    [event.target.name]: event.target.value
-                })
-            }
-            submitEdit = (e) => {
-                e.preventDefault();
-                let userToUpdate = {
-                    _id: this.state.user._id,
-                    username: this.state.username,
-                    email: this.state.email,
-                    password: this.state.password,
-                    passwordVerify: this.state.passwordVerify,
-                    avatar: this.state.avatar
-                }
-                this.props.handleEdit(userToUpdate);
-                this.setState({
-                    isEditing: !this.state.isEditing
-                })
-            }
-/* End experimental code */
+    handleEdit = (user) => {
+        ProfileAPI.update(user)
+        .then(res => {
+            let users = this.state.users;
+            let userToUpdate = users.findIndex(user => user._id === res.data._id);
+            users[userToUpdate] = res.data;
+            this.setState({
+                users
+            })
+        })
+    }
+
+    spriteSwap = (event) => {
+        this.setState({
+            itemSprite: event.target.name
+        })
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+    submitEdit = (e) => {
+        e.preventDefault();
+        let userToUpdate = {
+            _id: this.state.user._id,
+            username: this.state.user.username,
+            email: this.state.user.email,
+            password: this.state.user.password,
+            passwordVerify: this.state.user.passwordVerify,
+            avatar: this.state.user.avatar,
+            switchId: this.state.user.switchId
+        }
+        this.props.handleEdit(userToUpdate);
+        this.setState({
+            isEditing: !this.state.isEditing
+        })
+    }
 
     render(){ 
         if (!this.state.user) {
@@ -144,20 +136,20 @@ class Profile extends React.Component {
                                                     <div className="col s12">
                                                         <h5>Add New Record</h5>
                                                             <div className="card card-border" style={{zIndex: "10"}}>
-                                                                <div className="card-content row center-align">
-                                                                    <div className="col s4">
-                                                                        <img className="itemSprite" id="shovelSprite" src={require("../img/ItemSpriteSheet.png")}/>
+                                                                <div className="card-content row">
+                                                                    <div className="col s4" style={{paddingTop: "1px", paddingLeft: "1px"}} >
+                                                                        <img className={this.state.itemSprite} id="itemSprite" src={require("../img/ItemSpriteSheet.png")}/>
                                                                     </div>
                                                                     <form onSubmit={this.submitEdit}>
                                                                         <div className="col s6 offset-s6">
                                                                             <Dropdown trigger={<a className="dropdown-trigger btn waves-effect waves-light gradient-45deg-light-blue-cyan mr-1 mb-1 border-round" href="#" data-target='dropdown1'>Select</a>}>
-                                                                                <a href="#!">Shovel</a>
+                                                                                <a name="shovel" onClick={this.spriteSwap}>Shovel</a>
                                                                                 <a href="#!">Tarantula</a>
                                                                                 <a href="#!">Peach</a>
                                                                                 <a href="#!">Seabass</a>
                                                                                 <a href="#!">Net</a>
                                                                             </Dropdown>
-                                                                            <h6 className="font-weight-900 text-uppercase">this.name</h6>
+                                                                            <h6 className="font-weight-900 text-uppercase">{this.state.itemSprite}</h6>
                                                                             <label>Price:
                                                                                 <input type="text" name="price" value={this.state.price} onChange={this.handleChange}/>
                                                                             </label>

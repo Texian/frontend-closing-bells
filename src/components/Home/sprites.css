@@ -3,18 +3,25 @@
     display: block;
 }
 
-.itemSprite {
+#itemSprite {
     position: absolute;
-    margin: 0 0 0 10px;
-    padding: 0;
-    top: 0;
-    left: 0px;
     width: 128px;
     height: 128px;
     display: block;
     object-fit: none;
 }
 
-#shovelSprite {
+#itemSpriteHome {
+    width: 128px;
+    height: 128px;
+    display: block;
+    object-fit: none;
+}
+
+.nothing {
+    object-position: -2531px -2930px;
+}
+
+.shovel {
     object-position: -5px -5px;
 }

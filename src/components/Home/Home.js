@@ -9,7 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Dropdown.init(elems);
   });
 
-const Home = () => {
+
+class Home extends React.Component {
+
+    state = {
+        itemSprite: 'nothing'
+    }
+
+    spriteSwap = (event) => {
+        this.setState({
+            itemSprite: event.target.name
+        })
+    }
+    render() {
     return(
         <div>
             <div className="row">
@@ -22,17 +34,17 @@ const Home = () => {
                                     <div className="card animate fadeLeft" style={{zIndex: "10"}}>
                                         <div className="card-content row valign-wrapper">
                                             <div className="col s3">
-                                                <img className="itemSprite" id="shovelSprite" src={require("../../img/ItemSpriteSheet.png")}/>
+                                                <img className={this.state.itemSprite} id="itemSpriteHome" src={require("../../img/ItemSpriteSheet.png")} />
                                             </div>
                                             <div className="col s6">
                                                 <h4 className="mb-0 mt-0 display-fex center-align justify-content-between">Current Price</h4>
-                                                <h5 className="center-align">this.price bells</h5>
+                                                <h5 className="center-align">{this.state.itemSprite} for this.price bells</h5>
                                             </div>
                                             <div className="col s3">
                                                 <a className="dropdown-trigger btn-large waves-effect waves-light gradient-45deg-light-blue-cyan mr-1 mb-1 border-round hoverable" href="#" data-target='dropdown1'>Select</a>
                                             </div>
                                             <ul id="dropdown1" className="dropdown-content">
-                                                <li><a href="#!">Shovel</a></li>
+                                                <li><a name="shovel" onClick={this.spriteSwap}>Shovel</a></li>
                                                 <li><a href="#!">Tarantula</a></li>
                                                 <li><a href="#!">Peach</a></li>
                                                 <li><a href="#!">Seabass</a></li>
@@ -58,6 +70,7 @@ const Home = () => {
             </div>
         </div>
     )
+}
 }
 
 export default Home;
