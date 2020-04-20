@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileAPI from '../api/ProfileAPI';
-import BellmarketContainer from '../containers/BellmarketContainer';
+import BellmarketContainer from '../layout/BellmarketContainer';
 import '../components/Home/sprites.css';
 import {Dropdown} from 'react-materialize';
 
